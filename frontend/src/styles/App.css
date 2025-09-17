@@ -1,0 +1,99 @@
+/* Header and Navigation */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+/* Forms (Login, Register, TodoForm) */
+form {
+    display: flex;
+    flex-direction: column;
+    /* Stack inputs vertically for auth forms */
+    margin-bottom: 20px;
+    gap: 10px;
+    /* Space between form elements */
+}
+
+/* Override flex for TodoForm */
+.todo-form-container form {
+    flex-direction: row;
+    gap: 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Buttons */
+button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #5cb85c;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover:not(:disabled) {
+    background-color: #4cae4c;
+}
+
+button:disabled {
+    background-color: #aaa;
+    cursor: not-allowed;
+}
+
+/* Todo List */
+.todo-list {
+    list-style: none;
+    padding: 0;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: #f9f9f9;
+    border: 1px solid #eee;
+    margin-bottom: 10px;
+    border-radius: 4px;
+}
+
+.todo-task {
+    flex-grow: 1;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.todo-task.completed {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.todo-item button {
+    background-color: #d9534f;
+    margin-left: 10px;
+}
+
+.todo-item button:hover {
+    background-color: #c9302c;
+}
+
+.error-message {
+    color: red;
+    background: #ffe3e3;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    text-align: center;
+}
